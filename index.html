@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Trại Nguyễn Văn Trỗi - 11TN5</title>
     <style>
-        /* Khóa kích thước cơ bản để tránh nhảy giao diện */
         * {
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
@@ -35,7 +34,7 @@
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
             margin: 0; 
             padding: 0; 
-            padding-top: var(--nav-height); /* Bù đắp khoảng trống cho Navbar cố định */
+            padding-top: var(--nav-height); 
             background-image: url('https://i.pinimg.com/736x/78/5d/63/785d63a546e654085c14dbe602ce8ca3.jpg');
             background-size: cover; 
             background-position: center; 
@@ -48,7 +47,6 @@
             width: 100%;
         }
 
-        /* Khóa khung chứa không cho phép co dãn bất thường */
         .container { 
             width: 90%; 
             max-width: 850px; 
@@ -61,11 +59,10 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Navbar cố định hoàn toàn để không ảnh hưởng đến layout khi cuộn */
         nav { 
             background: rgba(0, 0, 0, 0.95); 
             backdrop-filter: blur(10px); 
-            position: fixed; /* Thay sticky bằng fixed để khóa vị trí */
+            position: fixed; 
             top: 0; 
             left: 0;
             width: 100%;
@@ -129,11 +126,10 @@
 
         nav ul li a:hover { color: var(--accent-blue); }
 
-        /* Header */
         header { 
             position: relative;
             color: #fff; 
-            padding: 40px 15px; 
+            padding: 35px 15px; 
             text-align: center; 
             margin: 15px auto; 
             border-radius: 8px; 
@@ -159,14 +155,21 @@
         header h1 { 
             margin: 0; 
             font-family: 'MyCustomFont', sans-serif; 
-            font-size: clamp(1.2rem, 3.5vw, 1.8rem); 
+            font-size: clamp(1.4rem, 4vw, 2.2rem); 
             text-shadow: 2px 2px 4px rgba(0,0,0,0.9); 
-            line-height: 1.2;
+            line-height: 1.1;
         }
 
-        header p { font-size: 0.85rem; opacity: 0.9; margin-top: 8px; }
+        header h1 small {
+            font-size: 0.6em;
+            display: block;
+            opacity: 0.9;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
 
-        /* Khối nội dung chính */
+        header p { font-size: 0.85rem; opacity: 0.9; margin-top: 12px; line-height: 1.4; }
+
         .main-content { 
             padding: 20px 15px; 
             background: rgba(255, 255, 255, 0.98); 
@@ -175,7 +178,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
             text-align: center;
             max-width: 700px; 
-            overflow: hidden; /* Ngăn chặn nội dung tràn làm hỏng layout */
+            overflow: hidden;
         }
 
         h2 { 
@@ -194,7 +197,6 @@
             font-size: 1.1rem;
         }
 
-        /* Lịch sử */
         .history-layout {
             display: flex;
             flex-direction: column;
@@ -241,7 +243,6 @@
             max-width: 400px;
         }
 
-        /* Gallery */
         .image-gallery { 
             display: flex;
             flex-wrap: wrap;
@@ -262,7 +263,6 @@
 
         .image-gallery figcaption { font-size: 0.8rem; margin-top: 4px; }
 
-        /* Danh sách ý nghĩa */
         .purpose-list { 
             list-style: none; 
             padding: 0; 
@@ -274,7 +274,6 @@
         .purpose-list li { margin-bottom: 6px; padding-left: 20px; position: relative; font-size: 0.85rem; }
         .purpose-list li::before { content: "✔"; position: absolute; left: 0; color: var(--primary-red); font-weight: bold; }
 
-        /* Ban phụ trách */
         .staff-list { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
@@ -290,7 +289,7 @@
         }
 
         .staff-group h4 { color: var(--primary-red); margin: 0 0 8px 0; border-bottom: 1px solid var(--accent-blue); display: inline-block; font-size: 0.9rem; }
-        .staff-group p { font-size: 0.8rem; margin: 3px 0; }
+        .staff-group p { font-size: 0.8rem; margin: 5px 0; line-height: 1.6; }
 
         .contact-info { 
             margin-top: 20px; 
@@ -305,7 +304,6 @@
         footer { text-align: center; padding: 20px 15px; background: var(--dark-bg); color: #fff; margin-top: 25px; border-top: var(--primary-red) 3px solid; }
         footer p { margin: 3px 0; font-size: 0.8rem; }
 
-        /* Mobile */
         @media (max-width: 850px) {
             .menu-toggle { display: flex; }
             nav ul {
@@ -347,18 +345,16 @@
 
     <div class="container">
         <header>
-            <h1>TRẠI:<br>NGUYỄN VĂN TRỖI</h1>
+            <h1><small>TRẠI:</small>NGUYỄN VĂN TRỖI</h1>
             <h1 style="color: #ffeb3b; margin-top: 4px; font-size: 1.3rem;">LỚP 11TN5</h1>
             <p>Tự hào mang tên người anh hùng bất khuất<br><b>"Sống như những đóa hoa"</b></p>
         </header>
 
-        <!-- Giới thiệu -->
         <section id="intro" class="main-content">
             <h2>Lời Giới Thiệu</h2>
             <p style="text-align: center; max-width: 550px; margin: auto;">Chào mừng các bạn đến với mái trại của lớp <b>11TN5</b>. Với chủ đề hướng về cội nguồn và lòng biết ơn, chúng em chọn tên trại là <b>Nguyễn Văn Trỗi</b> – biểu tượng sáng ngời của chủ nghĩa anh hùng cách mạng Việt Nam.</p>
         </section>
 
-        <!-- Lịch sử -->
         <section id="info" class="main-content">
             <h2>Lịch Sử Anh Hùng</h2>
             <div class="history-layout">
@@ -373,7 +369,7 @@
                 </div>
 
                 <div class="history-featured-img">
-                    <img src="https://imgprofile.vnanet.vn/media/graphic/profile/2025/07/22/f1307d47-8c57-4864-b396-d9d8ae767fb4-1681315248.jpg" alt="">
+                    <img src="https://imgprofile.vnanet.vn/media/graphic/profile/2025/07/22/f1307d47-8c57-4864-b396-d9d8ae767fb4-1681315248.jpg" alt="Chân dung Nguyễn Văn Trỗi">
                     <p class="img-caption">Chân dung người anh hùng</p>
                 </div>
 
@@ -384,26 +380,24 @@
             </div>
         </section>
 
-        <!-- Hoạt động -->
         <section id="activities" class="main-content">
             <h2>Hoạt Động Trại</h2>
             <div class="image-gallery">
                 <figure>
-                    <img src="https://i.postimg.cc/85BgY4BF/z7617855526085-905a4daa27785415034d28ab2af12dad.jpg" alt="">
+                    <img src="https://i.postimg.cc/85BgY4BF/z7617855526085-905a4daa27785415034d28ab2af12dad.jpg" alt="Trang trí trại">
                     <figcaption>Trang trí cổng trại</figcaption>
                 </figure>
                 <figure>
-                    <img src="https://i.postimg.cc/7hHrrzmY/z7617869921341-1d1a3a85d999a8623075167e27052992.jpg" alt="">
+                    <img src="https://i.postimg.cc/7hHrrzmY/z7617869921341-1d1a3a85d999a8623075167e27052992.jpg" alt="Sinh hoạt tập thể">
                     <figcaption>Sinh hoạt tập thể</figcaption>
                 </figure>
                 <figure>
-                    <img src="https://i.postimg.cc/RhSxxtXS/z7617961091331-4b86f62b9427e99d3316e068880b7d7a.jpg" alt="">
+                    <img src="https://i.postimg.cc/RhSxxtXS/z7617961091331-4b86f62b9427e99d3316e068880b7d7a.jpg" alt="Thuyết trình trại">
                     <figcaption>Thuyết trình ý nghĩa</figcaption>
                 </figure>
             </div>
         </section>
 
-        <!-- Ý nghĩa -->
         <section id="meaning" class="main-content">
             <h2>Ý Nghĩa & Mục Đích</h2>
             <div style="display: flex; flex-direction: column; align-items: center;">
@@ -416,7 +410,6 @@
             </div>
         </section>
 
-        <!-- Phụ trách -->
         <section id="contact" class="main-content">
             <h2>Ban Phụ Trách</h2>
             <div class="staff-list">
@@ -431,7 +424,12 @@
                 </div>
                 <div class="staff-group">
                     <h4>Nhóm Phụ Trách</h4>
-                    <p>Tuyết Hạnh, Hoài Nhân, Cẩm Nhung, Kim Thư</p>
+                    <p>
+                        Tuyết Hạnh<br>
+                        Hoài Nhân<br>
+                        Cẩm Nhung<br>
+                        Kim Thư
+                    </p>
                 </div>
             </div>
             <div class="contact-info">
@@ -454,7 +452,6 @@
             navList.classList.toggle('active');
         });
 
-        // Đóng menu khi bấm ra ngoài hoặc bấm vào link
         document.addEventListener('click', () => {
             navList.classList.remove('active');
         });
