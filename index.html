@@ -191,6 +191,11 @@
             margin-bottom: 12px; 
         }
 
+        h2.smaller-heading {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+
         h3 { 
             color: var(--primary-blue); 
             margin-top: 15px; 
@@ -234,13 +239,15 @@
             background: #fff5f5;
             border: 1px solid #ffcdd2;
             border-left: 4px solid var(--primary-red);
-            padding: 12px;
+            padding: 10px 12px;
             margin: 12px auto;
             font-style: italic;
             font-weight: 600;
             color: #b71c1c;
-            font-size: 0.85rem;
-            max-width: 400px;
+            /* Giảm kích thước chữ của quote-box */
+            font-size: 0.75rem;
+            max-width: 380px;
+            line-height: 1.5;
         }
 
         .image-gallery { 
@@ -359,7 +366,7 @@
             <h2>Lịch Sử Anh Hùng</h2>
             <div class="history-layout">
                 <div class="history-text">
-                    <h3 style="border-left: 3px solid var(--primary-blue); padding-left: 10px; text-align: left; font-size: 0.95rem;">1. Xuất thân và những năm đầu</h3>
+                    <h3 style="border-left: 3px solid var(--primary-blue); padding-left: 10px; text-align: left; font-size: 0.95rem;">1. Xuất thân</h3>
                     <p>Anh Nguyễn Văn Trỗi (1940-1964) sinh tại Điện Bàn, Quảng Nam. Anh sớm vào Sài Gòn làm thợ điện và tham gia tổ chức Biệt động thành Sài Gòn để chống lại ách đô hộ.</p>
                 </div>
 
@@ -399,7 +406,7 @@
         </section>
 
         <section id="meaning" class="main-content">
-            <h2>Ý Nghĩa & Mục Đích</h2>
+            <h2 class="smaller-heading">Ý Nghĩa & Mục Đích</h2>
             <div style="display: flex; flex-direction: column; align-items: center;">
                 <ul class="purpose-list">
                     <li><b>Gìn giữ lịch sử:</b> Nhắc nhở lòng biết ơn thế hệ trước.</li>
